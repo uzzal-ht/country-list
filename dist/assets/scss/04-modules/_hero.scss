@@ -1,0 +1,47 @@
+.hero-banner {
+    height: 660px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    &--title {
+        color: $white;
+        font-size: 44px;
+        line-height: 1;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+}
+
+.search-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    &--input {
+        width: 100%;
+        background-color: $white;
+        color: $headings-color;
+        padding: 15px 30px;
+        border: none;
+        padding-right: 70px;
+        border-radius: 50px;
+    }
+    &--button {
+        border: none;
+        background-color: transparent;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        font-size: 30px;
+        transform: translateY(-50%);
+        svg {
+            width: 1em;
+            height: 1em;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+.section-padding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.country-list-wrapper {
+    background-color: #f8f8f8;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.form-control {
+    padding: 30px;
+    &:focus {
+        box-shadow: 0 0 0 1px $primary;
+    }
+}
+
+.page-title {
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.iso-codes {
+    .input {
+        border: 1px solid #ddd;
+    }
+}
+
+.process-button {
+    margin-top: 30px;
+    background-color: $headings-color;
+    border: none;
+    color: $white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 30px 7px;
+    &:hover {
+        background-color: $primary;
+        color: $white;
+    }
+}
+
+.table-bordered>:not(caption)>*>*, .table-bordered>:not(caption)>* {
+    border-width: 1px;
+}
+.country-list-inner {
+    .table {
+        margin-bottom: 0;
+    }
+    th {
+        background-color: #f9f9f9;
+        color: $headings-color;
+    }
+}
+.flag {
+    width: 40px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.country-list-row {
+    td {
+        font-weight: 500;
+        color: $headings-color;
+    }
+}
+
+.country-list-inner {
+    display: none;
+}

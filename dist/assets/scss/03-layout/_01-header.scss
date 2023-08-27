@@ -1,0 +1,136 @@
+// desktop menu style
+.header-main-area{
+    padding-bottom: 12px;
+}
+.logo {
+    line-height: 1;
+    a {
+        color: $primary;
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 1;
+    }
+}
+.desktop-menu {
+    display: flex;
+    justify-content: center;
+    &-list {
+        list-style: none;
+        position: relative;
+        margin-right: 20px;
+        position: relative;
+        &:last-child {
+            margin-right: 0;
+        }
+        a {
+            color: #818181;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 22px;
+        }
+        &:hover > {
+            a {
+                color: #1c1c1c;
+            }
+            .desktop-menu-dropdown {
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+            }  
+        }
+    }
+    &-dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 10px 0;
+        opacity: 0;
+        visibility: hidden;
+        background-color: $white;
+        min-width: 230px;
+        transform: translateY(20px);
+        transition: $transition-base;
+        &-list {
+            position: relative;
+            a {
+                color: #1c1c1c;
+                font-size: 15px;
+                font-weight: 400;
+                padding: 6px 20px;
+                display: block;
+            }
+            &:hover {
+                a {
+                    color: $primary !important;
+                }
+                .desktop-menu {
+                    .dropdown {
+                        opacity: 1;
+                        transform: none;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0,-100%,0);
+        transform: translate3d(0,-100%,0)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0)
+    }
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown
+}
+
+// Sticky header
+.is-sticky {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    background-color: $white;
+    padding: 15px 0;
+    -webkit-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+    -webkit-animation: 900ms cubic-bezier(0.2, 1, 0.22, 1) 0s normal none 1 running fadeInDown;
+    animation: 900ms cubic-bezier(0.2, 1, 0.22, 1) 0s normal none 1 running fadeInDown;
+    .desktop-menu-list {
+        a {
+            color: $headings-color;
+        }
+    }
+}
+
+
+// header button
+.header-button-group {
+    margin-left: 30px;
+    .btn {
+        font-size: 15px;
+        text-transform: capitalize;
+        padding: 12px 20px;
+        border-radius: 5px;
+        &:hover {
+            background-color: #111111;
+            color: $white;
+        }
+    }
+    .login-btn {
+        font-weight: 500;
+        margin-right: 20px;
+    }
+}

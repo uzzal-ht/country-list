@@ -1,0 +1,11 @@
+.idea
+.git
+node_modules
+psd
+resources
+desktop.ini
+*.zip
+*.psd
+task.txt
+app
+package-lock.json

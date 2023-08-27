@@ -1,0 +1,55 @@
+/* .btn {
+    &-default {
+        color: $white;
+        background-color: $primary;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding: 10px 30px;
+        line-height: 24px;
+        &:hover {
+            color: $white;
+            background-color: $headings-color;
+        }
+    }
+} */
+.btn {
+    color: $white;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 20px 30px;
+    border-radius: 0;
+    line-height: 1;
+    background-color: $primary;
+    @media #{$small-mobile} {
+        padding: 15px 30px;
+    }
+    &-default {
+        background-color: $primary;
+        &:hover {
+            color: $white;
+            background-color: $headings-color;
+        }
+    }
+    &-small {
+        padding: 15px 30px;
+    }
+    &-white {
+        color: $headings-color;
+        background-color: $white;
+        &:hover {
+            color: $white;
+            background-color: $primary;
+        }
+    }
+    &--transparent {
+        background-color: transparent;
+        border: 1px solid $white;
+        &:hover {
+            color: $white;
+            background-color: $primary;
+            border-color: $primary;
+        }
+    }
+}
